@@ -27,7 +27,6 @@ int main() {
 	while (!(misFiguras.empty())) {
 		Figura* aux = misFiguras.top();
 		misFiguras.pop();
-
 		if (dynamic_cast<Cuadrado*>(aux) != nullptr) {
 			dynamic_cast<Cuadrado*>(aux)->imprimir();
 		} else if (dynamic_cast<Circulo*>(aux) != nullptr) {
@@ -38,7 +37,7 @@ int main() {
 	}
 
 	// Ahora jugaremos con Static
-	Calculadora miCalduladora("Casio", "MD5682");
+	// Calculadora miCalculadora("Casio", "MD5682");
 
 	Cuadrado miCuadrado(4.56);
 	Circulo miCirculo(8.08);
@@ -50,7 +49,7 @@ int main() {
 	cout << "Area de Cuadrado + Circulo = " << Calculadora::sumar(valoresAsumar) << endl;
 
 	// Imprimir datos de la calculadora
-	miCalduladora.imprimir();
+	// miCalculadora.imprimir();
 
 	// Ejemplo usando una template como propiedad de atributo
 	foo Ejemplo("pepe", "31/05/1995");
