@@ -15,8 +15,12 @@ float Cuadrado::perimetro() {
     return (float)(floor(this->cantLados * this->longLado * 100.0) / 100.0);
 }
 
-std::string Cuadrado::imprimir() {
+std::string Cuadrado::to_string() {
     std::stringstream salida;
     salida << "Cuadrado de lado con longitud: " << this->longLado << std::endl << "Perimetro: " << this->perimetro() << std::endl << "Area: " << this->area() << std::endl;
     return salida.str();
+}
+
+void Cuadrado::imprimir() {
+    std::cout << this->to_string() << std::endl;
 }

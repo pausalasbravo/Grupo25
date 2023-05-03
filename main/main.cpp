@@ -8,8 +8,11 @@
 #include "../Ejemplo_Polimorfismo/Cuadrado.h"
 #include "../Ejemplo_Polimorfismo/Triangulo.h"
 
-// Inlude de .h de Static Ejemplo
+// Inlusión de .h de Static Ejemplo
 #include "../Ejemplo_Static/Calculadora.h"
+
+// Inlusión de .h de Template
+#include "../Ejemplo_Template/foo.h"
 
 using namespace std;
 
@@ -26,11 +29,11 @@ int main() {
 		misFiguras.pop();
 
 		if (dynamic_cast<Cuadrado*>(aux) != nullptr) {
-			cout << dynamic_cast<Cuadrado*>(aux)->imprimir() << endl;
+			dynamic_cast<Cuadrado*>(aux)->imprimir();
 		} else if (dynamic_cast<Circulo*>(aux) != nullptr) {
-			cout << dynamic_cast<Circulo*>(aux)->imprimir() << endl;
+			dynamic_cast<Circulo*>(aux)->imprimir();
 		} else if (dynamic_cast<Triangulo*>(aux) != nullptr) {
-			cout << dynamic_cast<Triangulo*>(aux)->imprimir() << endl;
+			dynamic_cast<Triangulo*>(aux)->imprimir();
 		}
 	}
 
@@ -45,6 +48,13 @@ int main() {
 	valoresAsumar.push(miCirculo.area());
 
 	cout << "Area de Cuadrado + Circulo = " << Calculadora::sumar(valoresAsumar) << endl;
+
+	// Imprimir datos de la calculadora
+	miCalduladora.imprimir();
+
+	// Ejemplo usando una template como propiedad de atributo
+	foo Ejemplo("pepe", "31/05/1995");
+	Ejemplo.imprimir();
 
 	return 0;
 }

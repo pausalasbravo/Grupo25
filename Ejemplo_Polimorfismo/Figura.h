@@ -4,6 +4,7 @@
 #include <cmath>
 #include <string>
 #include <sstream>
+#include <iostream>
 
 class Figura {
 protected:
@@ -13,5 +14,6 @@ public:
 	~Figura();
 	virtual float area() = 0;
 	virtual float perimetro() = 0;
-	virtual std::string imprimir() = 0;
+	virtual std::string to_string() = 0;
+	virtual void imprimir() = 0;
 };

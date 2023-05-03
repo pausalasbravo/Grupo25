@@ -7,6 +7,17 @@ Calculadora::Calculadora(std::string nombre_, std::string modelo_) : nombre(nomb
 Calculadora::~Calculadora() {
 }
 
+std::string Calculadora::to_string() {
+    std::stringstream salida;
+    salida << "Marca -> " << this->nombre << std::endl
+        << "Modelo -> " << this->modelo;
+    return std::string();
+}
+
+void Calculadora::imprimir() {
+    std::cout << this->to_string() << std::endl;
+}
+
 float Calculadora::sumar(std::stack<float> valores) {
     float aux = 0;
     while (!(valores.empty())) {

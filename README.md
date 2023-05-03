@@ -1,1 +1,1 @@
-# Ejemplo_Polimorfismo_Static
+Ejercicio de Ejemplo usando poliformismo, static como método, excepciones y template

@@ -14,8 +14,12 @@ float Circulo::perimetro() {
     return (float)(floor(2 * PI * this->radio * 100.0) / 100.0);
 }
 
-std::string Circulo::imprimir() {
+std::string Circulo::to_string() {
     std::stringstream salida;
     salida << "Circulo de Radio: " << this->radio << std::endl << "Perimetro: " << this->perimetro() << std::endl << "Area: " << this->area() << std::endl;
     return salida.str();
+}
+
+void Circulo::imprimir() {
+    std::cout << this->to_string() << std::endl;
 }

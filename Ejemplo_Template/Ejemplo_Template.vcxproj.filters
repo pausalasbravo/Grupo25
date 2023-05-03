@@ -18,12 +18,15 @@
     <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Calculadora.h">
+    <ClInclude Include="propiedad.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="foo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Calculadora.cpp">
+    <ClCompile Include="foo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

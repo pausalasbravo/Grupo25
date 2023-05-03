@@ -18,6 +18,7 @@ public:
     ~Triangulo();
     float area();
     float perimetro();
-    std::string imprimir();
+    std::string to_string();
+    void imprimir();
 };
 
